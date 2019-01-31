@@ -24,6 +24,10 @@ export class LoginComponent implements OnInit {
     document.querySelector('body').setAttribute("style", "background-color: #F7F7F7;");
   }
 
+  ngOnDestroy() {
+    document.querySelector('body').setAttribute("style", "background-color: #fff;");
+  }
+
   login(event: Event): void {
     console.log('Inside Login');
     event.preventDefault();
