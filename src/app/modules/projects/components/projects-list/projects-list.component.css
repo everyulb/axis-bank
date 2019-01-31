@@ -1,0 +1,72 @@
+.projects-list-wrapper h4 {
+    font-size: 2rem;
+    color: #6E6E6E;
+    font-weight: var(--lightWt);
+    margin-bottom: 23px;
+}
+
+.project {
+    width: 819px;
+    height: 174px;
+    background: #F7F7F7;
+    border-radius: 4px;
+    padding: 25px;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.project-header {
+    margin-bottom: 40px;
+}
+
+.project-header h5 {
+    font-size: 1.3rem;
+    font-weight: var(--boldWt);
+    color: #464646;
+}
+
+.location {
+    font-size: 0.9rem;
+    font-weight: var(--regularWt);
+    color: #626262;   
+}
+
+.phase {
+    text-transform: uppercase;
+    color: #626262;
+    width: 72px;
+    height: 27px;
+    border-radius: 4px;
+    background: #E5E5E5;
+    line-height: 27px;
+    font-size: 0.9rem;
+    text-align: center;
+    font-weight: var(--boldWt);
+    display: inline-block;
+}
+
+.due-date {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #626262;
+    font-size: 0.9rem;
+    font-weight: var(--boldWt);
+    margin-left: 16px;
+}
+
+/* Tabs */
+
+.tabs button {
+    background: none;
+    color: #626262;
+    font-size: 14px;
+    margin-bottom: 25px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.selected-tab {
+    border-bottom: 2px solid #626262;
+    font-weight: var(--boldWt);
+}

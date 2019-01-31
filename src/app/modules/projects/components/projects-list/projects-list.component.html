@@ -1,0 +1,23 @@
+<div class="projects-list-wrapper">
+  <h4>Projects</h4>
+  <div class="tabs">
+      <button class="selected-tab" style="border-bottom: 2px solid #626262;">ALL</button>
+      <button>SURVEY</button>
+      <button>EXECUTION</button>
+      <button>IMPACT ANALYSIS</button>
+  </div>
+  <div class="project" *ngFor="let project of projects" (click)="openProject(project.id)">
+      <div class="project-header">
+        <h5>{{ project.name }}</h5>
+        <div class="location">
+          <p>{{ project.location }}</p>
+        </div>
+      </div>
+      <div class="meta">
+        <div class="phase">{{ project.phase }}</div>
+        <div class="due-date">
+            {{ project.dueDate }}
+        </div>
+      </div>
+    </div>
+</div>

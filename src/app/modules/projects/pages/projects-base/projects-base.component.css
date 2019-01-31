@@ -1,0 +1,36 @@
+/* Header Starts */
+.nav-header {
+    height: 80px;
+    line-height: 80px;
+    padding: 0;
+    margin: 0;
+    background: rgba(247, 247, 247, 1);
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.16);
+}
+
+.nav-brand {
+    color: var(--themeRed);
+    margin-left: 82px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 80px;
+    display: inline;
+}
+
+.nav-right-links {
+    float: right;
+}
+
+.nav-right-links img {
+    margin-right: 82px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* Header Ends */
+
+.projects-list {
+    margin-top: 90px;
+    margin-left: 98px;
+}
