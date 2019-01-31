@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'projects'
   },
   {
+    path: 'project-overview',
+    redirectTo: 'project-overview'
+  },
+  {
     path: '',
     redirectTo: 'login',
     pathMatch: 'full'

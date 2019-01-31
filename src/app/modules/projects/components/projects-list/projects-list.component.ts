@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class ProjectsListComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(public router: Router) { }
   projects: Array<any> = [
     {
       id: 12,
@@ -24,6 +24,9 @@ export class ProjectsListComponent implements OnInit {
 
   openProject(id: number): void {
     console.log('Project Opened ' + id);
-  }\
+    this.router.navigate(['project-overview']);
+    console.log('routed');
+    // this.router.navigate['login'];
+  }
 
 }
