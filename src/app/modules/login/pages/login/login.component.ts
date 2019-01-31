@@ -17,7 +17,6 @@ export class LoginComponent implements OnInit {
     ) { }
 
   ngOnInit() {
-    // this.getAllComponents();
   }
   
   ngAfterViewInit() {
@@ -39,12 +38,5 @@ export class LoginComponent implements OnInit {
       alert('Wrong Credentials');
     }
   }
-
-  // getAllComponents(): void {
-  //   this.client.getAllComponents().subscribe(
-  //     res => console.log(res),
-  //     err => console.error(err)
-  //   );
-  // }
 
 }
