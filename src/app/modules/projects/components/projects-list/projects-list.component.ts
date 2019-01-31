@@ -23,10 +23,7 @@ export class ProjectsListComponent implements OnInit {
   }
 
   openProject(id: number): void {
-    console.log('Project Opened ' + id);
     this.router.navigate(['project-overview']);
-    console.log('routed');
-    // this.router.navigate['login'];
   }
 
 }
