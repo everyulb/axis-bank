@@ -90,10 +90,14 @@
 
 /* Points starts */
 
+.village-points {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
 .point {
-    display: inline-block;
-    padding-left: 38px;
-    margin-right: 40px;
+    /* padding-left: 38px;
+    margin-right: 40px; */
     margin-bottom: 60px;
 }
 
