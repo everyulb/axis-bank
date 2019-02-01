@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProjectsBaseComponent } from './pages/projects-base/projects-base.component';
-import { ProjectOverviewComponent } from './pages/project-overview/project-overview.component';
+import { MapComponent } from './pages/map/map.component';
 
 const routes: Routes = [
   {
@@ -10,7 +10,7 @@ const routes: Routes = [
   },
   {
     path: 'project-overview',
-    component: ProjectOverviewComponent
+    component: MapComponent
   }
 ];
 

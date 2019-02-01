@@ -1,0 +1,117 @@
+.map-details-wrapper {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    width: 524px;
+    position: absolute;
+    right: 51px;
+    top: 156px;
+    background: #FFFFFF;
+}
+
+.village-overview {
+    margin: 30px 48px;
+}
+
+.village-overview img {
+    width: 78px;
+    height: 78px;   
+}
+
+.village-overview-data {
+    float: right;
+    margin-right: 40%;
+    margin-left: 38px;   
+}
+
+.village-overview-data h4 {
+    color: rgba(70, 70, 70, 1);
+    font-size: 2.5rem;
+    font-weight: var(--boldWt);
+}
+
+.village-overview-data p {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    color: rgba(70, 70, 70, 1);
+    font-weight: var(--boldWt);
+}
+
+.village-details {
+    width: 100%;
+}
+
+.village-details-header-options {
+    padding: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.village-details-header-options button {
+    background: #F4F4F4;
+    color: rgba(194, 194, 194, 1);
+    border-radius: 50%;
+    box-shadow: none;
+    width: 49px;
+    height: 49px;
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.close-button {
+    float: right;
+}
+
+.village-details-content {
+    padding: 50px 38px;
+    padding-bottom: 0px;
+}
+
+.village-details-content h4 {
+    color: rgba(39, 39, 39, 1);
+    font-size: 1.7rem;
+    font-weight: var(--regularWt);
+    margin-bottom: 50px;
+}
+
+.details {
+    margin-bottom: 40px;
+}
+
+.details p {
+    color: rgba(44, 44, 44, 1);
+    font-size: 1.1rem;
+    font-weight: var(--boldWt);
+    margin-bottom: 0px;
+}
+
+.meta-text {
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 0.9rem;
+    font-weight: var(--regularWt);
+}
+
+/* Points starts */
+
+.point {
+    display: inline-block;
+    padding-left: 38px;
+    margin-right: 40px;
+    margin-bottom: 60px;
+}
+
+.point img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.point-data {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.point-data h4 {
+    font-size: 1.1rem;
+    color: rgba(44, 44, 44, 1);
+    margin-bottom: 0px;
+}
+
+/* Points End */

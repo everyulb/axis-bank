@@ -4,9 +4,9 @@ import { CommonModule } from '@angular/common';
 import { ProjectsRoutingModule } from './projects-routing.module';
 import { ProjectsListComponent } from './components/projects-list/projects-list.component';
 import { ProjectsBaseComponent } from './pages/projects-base/projects-base.component';
-import { ProjectOverviewComponent } from './pages/project-overview/project-overview.component';
-import { MapComponent } from './components/map/map.component';
+import { MapComponent } from './pages/map/map.component';
 import { AgmCoreModule, GoogleMapsAPIWrapper,  KmlLayerManager } from '@agm/core';
+import { MapDetailsComponent } from './components/map-details/map-details.component';
 
 @NgModule({
   imports: [
@@ -16,7 +16,7 @@ import { AgmCoreModule, GoogleMapsAPIWrapper,  KmlLayerManager } from '@agm/core
       apiKey: 'AIzaSyAF16wKOlIRqQOAxtvR7Gk2Oobvpb_BfDk'
     })
   ],
-  declarations: [ProjectsListComponent, ProjectsBaseComponent, ProjectOverviewComponent, MapComponent],
+  declarations: [ProjectsListComponent, ProjectsBaseComponent, MapComponent, MapDetailsComponent],
   providers: [GoogleMapsAPIWrapper,  KmlLayerManager]
 })
 export class ProjectsModule { }

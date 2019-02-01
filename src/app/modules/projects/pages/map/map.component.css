@@ -29,3 +29,9 @@
 }
 
 /* Header Ends */
+
+agm-map {
+    height: 750px;
+    margin: 0px;
+    width: 100%;
+}

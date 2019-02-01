@@ -1,0 +1,54 @@
+<div class="map-details-wrapper">
+  <div class="village-overview" *ngIf="showOverview">
+    <img src="/assets/icons/village.svg" alt="">
+    <div class="village-overview-data">
+      <h4>{{ villagesSurveyed}}</h4>
+      <p>villages surveyed</p>
+    </div>
+  </div>
+  <div class="village-details" *ngIf="showDetails">
+    <div class="village-details-header-options">
+      <button class="btn"><i class="fa fa-angle-left"></i></button>
+      <button class="btn"><i class="fa fa-angle-right"></i></button>
+      <button class="btn close-button"><i class="fa fa-times"></i></button>
+    </div>
+    <div class="village-details-content">
+      <h4>{{ villageDetails.name }}</h4>
+      <div class="details">
+        <p>
+          {{ villageDetails.wasteDischarge}} lpm
+        </p>
+        <span class="meta-text">Total Discharge</span>
+      </div>
+      <div class="details">
+        <p>
+          {{ villageDetails.primaryPollution}}
+        </p>
+        <span class="meta-text">Primary reason for pollution</span>
+      </div>
+    </div>
+    <div class="village-points">
+      <div class="point">
+        <img src="/assets/icons/tapped.svg" alt="">
+        <div class="point-data">
+          <h4>{{ villageDetails.tapped }}</h4>
+          <span class="meta-text">Tapped</span>
+        </div>
+      </div>
+      <div class="point">
+        <img src="/assets/icons/partiallyTapped.svg" alt="">
+        <div class="point-data">
+          <h4>{{ villageDetails.partiallyTapped }}</h4>
+          <span class="meta-text">Tapped</span>
+        </div>
+      </div>
+      <div class="point">
+        <img src="/assets/icons/untapped.svg" alt="">
+        <div class="point-data">
+          <h4>{{ villageDetails.untapped }}</h4>
+          <span class="meta-text">Tapped</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

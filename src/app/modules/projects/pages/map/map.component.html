@@ -17,5 +17,29 @@
   </div>
 </header>
 <section class="map-container">
-  <app-map></app-map>
+  <div class="wrapper">
+    <div class="map-canvas">
+      <agm-map 
+        [latitude]="lat" 
+        [longitude]="lng" 
+        [zoomControlOptions]="{position: zoomPosition}" 
+        [streetViewControlOptions]="{position: streetViewPosition}" 
+        [zoom]="zoomLevel" 
+        [mapTypeControl]='true'
+        [mapTypeControlOptions] = "{position: mapTypeControlPosition}"
+        [styles]="mapStyles">
+
+        <div>
+          <agm-kml-layer 
+          *ngFor="let polygon of polygons" 
+          [url]="polygon.url"
+          [zIndex]="5"
+          [screenOverlays]="true"></agm-kml-layer>
+        </div>
+
+      </agm-map>
+      </div>
+
+      <app-map-details></app-map-details>
+  </div>
 </section>
