@@ -1,6 +1,5 @@
 .map-details-wrapper {
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-    width: 524px;
     position: absolute;
     right: 51px;
     top: 156px;
@@ -8,6 +7,7 @@
 }
 
 .village-overview {
+    width: 450px;
     margin: 30px 48px;
 }
 
@@ -18,8 +18,7 @@
 
 .village-overview-data {
     float: right;
-    margin-right: 40%;
-    margin-left: 38px;   
+    margin-right: 45%;
 }
 
 .village-overview-data h4 {
@@ -31,7 +30,7 @@
 .village-overview-data p {
     text-transform: uppercase;
     font-size: 0.9rem;
-    color: rgba(70, 70, 70, 1);
+    color: #626262;
     font-weight: var(--boldWt);
 }
 

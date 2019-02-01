@@ -9,8 +9,8 @@ export class MapDetailsComponent implements OnInit {
 
   constructor() { }
 
-  showOverview: boolean = false;
-  showDetails: boolean = true;
+  showOverview: boolean = true;
+  showDetails: boolean = false;
 
   villagesSurveyed = 6;
 
