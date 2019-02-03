@@ -26,4 +26,7 @@ export class MapDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
+  markerClicked(marker) {
+    console.log(marker);
+  }
 }

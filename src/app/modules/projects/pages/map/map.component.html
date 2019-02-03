@@ -29,13 +29,21 @@
         [mapTypeControlOptions] = "{position: mapTypeControlPosition}"
         [styles]="mapStyles">
 
-        <div>
-          <agm-kml-layer 
-          *ngFor="let polygon of polygons" 
-          [url]="polygon.url"
-          [zIndex]="5"
-          [screenOverlays]="true"></agm-kml-layer>
-        </div>
+        <agm-kml-layer 
+        *ngFor="let polygon of polygons" 
+        [url]="polygon.url"
+        [zIndex]="5"
+        [screenOverlays]="true"
+        (layerClick)="handleKmlClick()"></agm-kml-layer>
+
+        <!-- [iconUrl] for icons -->
+        <agm-marker 
+          *ngFor="let marker of markers" 
+          [latitude]="marker.lat" 
+          [longitude]="marker.long"
+          [iconUrl]="markerIcon"
+          (markerClick)="markerClicked(marker)">
+        </agm-marker>
 
       </agm-map>
       </div>
