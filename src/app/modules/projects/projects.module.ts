@@ -7,6 +7,7 @@ import { ProjectsBaseComponent } from './pages/projects-base/projects-base.compo
 import { MapComponent } from './pages/map/map.component';
 import { AgmCoreModule, GoogleMapsAPIWrapper,  KmlLayerManager } from '@agm/core';
 import { MapDetailsComponent } from './components/map-details/map-details.component';
+import { ProjectOverviewComponent } from './pages/project-overview/project-overview.component';
 
 @NgModule({
   imports: [
@@ -16,7 +17,7 @@ import { MapDetailsComponent } from './components/map-details/map-details.compon
       apiKey: 'AIzaSyAF16wKOlIRqQOAxtvR7Gk2Oobvpb_BfDk'
     })
   ],
-  declarations: [ProjectsListComponent, ProjectsBaseComponent, MapComponent, MapDetailsComponent],
+  declarations: [ProjectsListComponent, ProjectOverviewComponent, ProjectsBaseComponent, MapComponent, MapDetailsComponent],
   providers: [GoogleMapsAPIWrapper,  KmlLayerManager]
 })
 export class ProjectsModule { }
