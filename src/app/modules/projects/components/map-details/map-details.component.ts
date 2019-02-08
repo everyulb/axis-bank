@@ -9,8 +9,8 @@ export class MapDetailsComponent implements OnInit {
 
   constructor() { }
 
-  showOverview: boolean = true;
-  showDetails: boolean = false;
+  showOverview: boolean = false;
+  showDetails: boolean = true;
 
   villagesSurveyed = 6;
 
@@ -26,7 +26,5 @@ export class MapDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
-  markerClicked(marker) {
-    console.log(marker);
-  }
+  
 }
