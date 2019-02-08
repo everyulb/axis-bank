@@ -41,13 +41,13 @@
           *ngFor="let marker of markers" 
           [latitude]="marker.lat" 
           [longitude]="marker.long"
-          [iconUrl]="markerIcon"
+          [iconUrl]="marker.iconUrl"
           (markerClick)="markerClicked(marker)">
         </agm-marker>
 
       </agm-map>
       </div>
 
-      <app-map-details></app-map-details>
+      <app-map-details [markerListener]="emitMarkerClickEvent" ></app-map-details>
   </div>
 </section>

@@ -1,4 +1,5 @@
 <div class="map-details-wrapper">
+  <!-- Overview Card for Map Landing Page Starts -->
   <div class="village-overview" *ngIf="showOverview">
     <img src="/assets/icons/village.svg" alt="">
     <div class="village-overview-data">
@@ -6,13 +7,15 @@
       <p>villages surveyed</p>
     </div>
   </div>
-  <div class="village-details" *ngIf="showDetails">
+  <!-- Overview Card for Map Landing Page Ends-->
+  <div class="village-details" *ngIf="!showOverview">
     <div class="village-details-header-options">
       <button class="btn"><i class="fa fa-angle-left"></i></button>
       <button class="btn"><i class="fa fa-angle-right"></i></button>
       <button class="btn close-button"><i class="fa fa-times"></i></button>
     </div>
-    <div class="village-details-content">
+    <!-- Village Details Start -->
+    <div class="village-details-content" *ngIf="showDetails">
       <h4>{{ villageDetails.name }}</h4>
       <div class="details">
         <p>
@@ -27,7 +30,7 @@
         <span class="meta-text">Primary reason for pollution</span>
       </div>
     </div>
-    <div class="village-points">
+    <div class="village-points" *ngIf="showDetails">
       <div class="point" style="padding-left:38px;">
         <img src="/assets/icons/tapped.svg" alt="">
         <div class="point-data">
@@ -50,5 +53,32 @@
         </div>
       </div>
     </div>
+    <!-- Village Details End -->
+
+    <!-- Markers Details Start -->
+    <div class="marker-details">
+      <div class="image-container">
+        <img [src]="markerDetails.image" alt="">
+      </div>
+      <div class="details-container">
+        <h4>{{ markerDetails.name }}</h4>
+        <div class="status">
+            <img [src]="markerDetails.iconUrl" alt="">
+            <p>{{ markerDetails.status }}</p>
+            <span class="meta-text">Status</span>
+        </div>
+        <div class="waste-details">
+          <div class="waste">
+              <h4>{{ markerDetails.discharge }}</h4>
+              <span class="meta-text">Discharge</span>
+          </div>
+          <div class="waste">
+              <h4>{{ markerDetails.pollutionReason }}</h4>
+              <span class="meta-text">Primary reason for pollution</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Markers Details End -->
   </div>
 </div>

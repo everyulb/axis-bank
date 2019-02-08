@@ -3,6 +3,7 @@ import { MapsAPILoader, AgmMap } from '@agm/core';
 import { GoogleMapsAPIWrapper, KmlLayerManager } from '@agm/core/services'
 import { Router } from '@angular/router';
 import { markers } from './markers.js';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-map',
@@ -22,6 +23,8 @@ export class MapComponent implements OnInit {
   markers: Array<any>;
 
   @ViewChild(AgmMap) map: AgmMap;
+  emitMarkerClickEvent: Subject<any> = new Subject();
+
   public mapStyles = [
     {
     "featureType": "poi",
@@ -54,6 +57,15 @@ export class MapComponent implements OnInit {
 
   ngOnInit() {
     this.markers = markers;
+    this.markers.forEach(m => {
+      if(m.status === 'Tapped') {
+        m['iconUrl'] = '/assets/icons/tapped.svg';
+      } else if (m.status === 'Untapped') {
+        m['iconUrl'] = '/assets/icons/untapped.svg';
+      } else if (m.status === 'Partially Tapped') {
+        m['iconUrl'] = '/assets/icons/partiallyTapped.svg';
+      }
+    })
     console.log(this.markers);
   }
 
@@ -66,6 +78,6 @@ export class MapComponent implements OnInit {
   }
 
   markerClicked(marker) {
-    console.log(marker);
+    this.emitMarkerClickEvent.next(marker);
   }
 }
