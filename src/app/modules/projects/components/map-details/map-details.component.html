@@ -10,9 +10,9 @@
   <!-- Overview Card for Map Landing Page Ends-->
   <div class="village-details" *ngIf="!showOverview">
     <div class="village-details-header-options">
-      <button class="btn"><i class="fa fa-angle-left"></i></button>
-      <button class="btn"><i class="fa fa-angle-right"></i></button>
-      <button class="btn close-button"><i class="fa fa-times"></i></button>
+      <button class="btn" (click)="goToPrevMarker()"><i class="fa fa-angle-left" ></i></button>
+      <button class="btn" (click)="goToNextMarker()"><i class="fa fa-angle-right" ></i></button>
+      <button class="btn close-button"><i class="fa fa-times" (click)="hideMarkerDetails()"></i></button>
     </div>
     <!-- Village Details Start -->
     <div class="village-details-content" *ngIf="showDetails">
@@ -56,24 +56,24 @@
     <!-- Village Details End -->
 
     <!-- Markers Details Start -->
-    <div class="marker-details">
+    <div class="marker-details" *ngIf="showMarkerDetails">
       <div class="image-container">
-        <img [src]="markerDetails.image" alt="">
+        <img [src]="currentMarker?.image" alt="">
       </div>
       <div class="details-container">
-        <h4>{{ markerDetails.name }}</h4>
+        <h4>{{currentMarker?.name }}</h4>
         <div class="status">
-            <img [src]="markerDetails.iconUrl" alt="">
-            <p>{{ markerDetails.status }}</p>
+            <img [src]="currentMarker?.iconUrl" alt="">
+            <p>{{currentMarker?.status }}</p>
             <span class="meta-text">Status</span>
         </div>
         <div class="waste-details">
           <div class="waste">
-              <h4>{{ markerDetails.discharge }}</h4>
+              <h4>{{currentMarker?.discharge }}</h4>
               <span class="meta-text">Discharge</span>
           </div>
           <div class="waste">
-              <h4>{{ markerDetails.pollutionReason }}</h4>
+              <h4>{{currentMarker?.pollutionReason }}</h4>
               <span class="meta-text">Primary reason for pollution</span>
           </div>
         </div>

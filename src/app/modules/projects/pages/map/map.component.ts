@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MapsAPILoader, AgmMap } from '@agm/core';
 import { GoogleMapsAPIWrapper, KmlLayerManager } from '@agm/core/services'
 import { Router } from '@angular/router';
-import { markers } from './markers.js';
+import { markers } from '../../markers.js';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -24,6 +24,7 @@ export class MapComponent implements OnInit {
 
   @ViewChild(AgmMap) map: AgmMap;
   emitMarkerClickEvent: Subject<any> = new Subject();
+  onMarkerTraversal: Subject<any> = new Subject();
 
   public mapStyles = [
     {
@@ -67,6 +68,12 @@ export class MapComponent implements OnInit {
       }
     })
     console.log(this.markers);
+
+    this.onMarkerTraversal.subscribe( index => {
+      this.lat = this.markers[index].lat;
+      this.lng = this.markers[index].long;
+      this.zoomLevel = 16;
+    });
   }
 
   logout(): void {
@@ -77,7 +84,19 @@ export class MapComponent implements OnInit {
     console.log('KML clicked');
   }
 
-  markerClicked(marker) {
-    this.emitMarkerClickEvent.next(marker);
+  // markerClicked(index) {
+  //   this.emitMarkerClickEvent.next(index);
+  // }
+
+  protected mapReady(map) {
+    this.map = map;
   }
+
+  public markerClicked = (index) => {
+    this.lat = this.markers[index].lat;
+    this.lng = this.markers[index].long;
+    this.zoomLevel = 16;
+    this.emitMarkerClickEvent.next(index);
+  }
+
 }

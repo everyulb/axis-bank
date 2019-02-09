@@ -38,16 +38,16 @@
 
         <!-- [iconUrl] for icons -->
         <agm-marker 
-          *ngFor="let marker of markers" 
+          *ngFor="let marker of markers; let i = index" 
           [latitude]="marker.lat" 
           [longitude]="marker.long"
           [iconUrl]="marker.iconUrl"
-          (markerClick)="markerClicked(marker)">
+          (markerClick)="markerClicked(i)">
         </agm-marker>
 
       </agm-map>
       </div>
 
-      <app-map-details [markerListener]="emitMarkerClickEvent" ></app-map-details>
+      <app-map-details [markerListener]="emitMarkerClickEvent" [traverseMarkers]="onMarkerTraversal"></app-map-details>
   </div>
 </section>
