@@ -39,21 +39,8 @@ export class MapDetailsComponent implements OnInit {
     this.markerListener.subscribe((index) => {
       this.showMarkerDetails = false;
 
-      this.currentMarkerIndex = index;
-
-      this.showOverview = false;
-      this.showDetails = false;
-      this.showMarkerDetails = true;
-      this.currentMarker = this.markers[index];
-      console.log('Current Marker: ', this.currentMarker);
-      this.currentMarker['image'] = this.currentMarker.images[0];
-      if(this.currentMarker.status === 'Tapped') {
-        this.currentMarker['iconUrl'] = '/assets/icons/tapped.svg';
-      } else if (this.currentMarker.status === 'Untapped') {
-        this.currentMarker['iconUrl'] = '/assets/icons/untapped.svg';
-      } else if (this.currentMarker.status === 'Partially Tapped') {
-        this.currentMarker['iconUrl'] = '/assets/icons/partiallyTapped.svg';
-      }
+      this.setCurrentMarker(index);
+      
       this.showMarkerDetails = true;
     })
   }
@@ -68,7 +55,7 @@ export class MapDetailsComponent implements OnInit {
     if (this.currentMarkerIndex !== 0) {
       this.currentMarkerIndex--;
       this.traverseMarkers.next(this.currentMarkerIndex);
-      this.currentMarker = this.markers[this.currentMarkerIndex];
+      this.setCurrentMarker(this.currentMarkerIndex);
     }
   }
 
@@ -77,8 +64,25 @@ export class MapDetailsComponent implements OnInit {
     if (this.currentMarkerIndex < (this.markers.length - 1) ) {
       this.currentMarkerIndex++;
       this.traverseMarkers.next(this.currentMarkerIndex);
-      this.currentMarker = this.markers[this.currentMarkerIndex];
+      this.setCurrentMarker(this.currentMarkerIndex);
     }
+  }
+
+  setCurrentMarker(index: number): void {
+      this.currentMarkerIndex = index;
+      this.showOverview = false;
+      this.showDetails = false;
+      this.showMarkerDetails = true;
+      this.currentMarker = this.markers[index];
+      console.log('Current Marker: ', this.currentMarker);
+      this.currentMarker['image'] = this.currentMarker.images[0];
+      if(this.currentMarker.status === 'Tapped') {
+        this.currentMarker['iconUrl'] = '/assets/icons/tapped.svg';
+      } else if (this.currentMarker.status === 'Untapped') {
+        this.currentMarker['iconUrl'] = '/assets/icons/untapped.svg';
+      } else if (this.currentMarker.status === 'Partially Tapped') {
+        this.currentMarker['iconUrl'] = '/assets/icons/partiallyTapped.svg';
+      }
   }
 
   
