@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Subject } from 'rxjs';
 import { markers } from '../../markers.js';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-map-details',
@@ -9,7 +10,7 @@ import { markers } from '../../markers.js';
 })
 export class MapDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   @Input() markerListener: Subject<any>;
   @Input() traverseMarkers: Subject<any>;
@@ -46,9 +47,13 @@ export class MapDetailsComponent implements OnInit {
   }
 
   hideMarkerDetails(): void {
+    if(this.showMarkerDetails === true) {
+      this.traverseMarkers.next(-1);
+    } else {
+      this.router.navigate(['projects']);
+    }
     this.showMarkerDetails = false;
     this.showDetails = true;
-    this.traverseMarkers.next(-1);
   }
 
   goToPrevMarker(): void {
