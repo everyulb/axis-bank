@@ -10,9 +10,9 @@
   <!-- Overview Card for Map Landing Page Ends-->
   <div class="village-details" *ngIf="!showOverview">
     <div class="village-details-header-options">
-      <button class="btn" (click)="goToPrevMarker()"><i class="fa fa-angle-left" ></i></button>
-      <button class="btn" (click)="goToNextMarker()"><i class="fa fa-angle-right" ></i></button>
-      <button class="btn close-button"><i class="fa fa-times" (click)="hideMarkerDetails()"></i></button>
+      <button class="btn" (click)="goToPrevMarker()" *ngIf="showMarkerDetails"><i class="fa fa-angle-left" ></i></button>
+      <button class="btn" (click)="goToNextMarker()" *ngIf="showMarkerDetails"><i class="fa fa-angle-right" ></i></button>
+      <button class="btn close-button" (click)="hideMarkerDetails()"><i class="fa fa-times"></i></button>
     </div>
     <!-- Village Details Start -->
     <div class="village-details-content" *ngIf="showDetails">

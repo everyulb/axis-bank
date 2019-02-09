@@ -45,9 +45,10 @@ export class MapDetailsComponent implements OnInit {
     })
   }
 
-  hideMarkerDeatils(): void {
+  hideMarkerDetails(): void {
     this.showMarkerDetails = false;
-    this.showOverview = true;
+    this.showDetails = true;
+    this.traverseMarkers.next(-1);
   }
 
   goToPrevMarker(): void {

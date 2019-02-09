@@ -12,9 +12,9 @@ import { Subject } from 'rxjs';
 })
 export class MapComponent implements OnInit {
 
-  lat: number = 30.171533; 
-  lng: number = 78.400059;
-  zoomLevel = 14;
+  lat: number = 30.112864;
+  lng: number = 78.304060;
+  zoomLevel = 15;
   zoomPosition: google.maps.ControlPosition;
   streetViewPosition: google.maps.ControlPosition;
   mapTypeControlPosition: google.maps.ControlPosition;
@@ -70,9 +70,16 @@ export class MapComponent implements OnInit {
     console.log(this.markers);
 
     this.onMarkerTraversal.subscribe( index => {
-      this.lat = this.markers[index].lat;
-      this.lng = this.markers[index].long;
-      this.zoomLevel = 16;
+      if(index !== -1) {
+        this.lat = this.markers[index].lat;
+        this.lng = this.markers[index].long;
+        this.zoomLevel = 16;
+      } else {
+        console.log('init map');
+        this.lat = 30.112864;
+        this.lng = 78.304060;
+        this.zoomLevel = 15;
+      }
     });
   }
 
