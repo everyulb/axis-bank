@@ -8,6 +8,8 @@ import { MapComponent } from './pages/map/map.component';
 import { AgmCoreModule, GoogleMapsAPIWrapper,  KmlLayerManager } from '@agm/core';
 import { MapDetailsComponent } from './components/map-details/map-details.component';
 import { ProjectOverviewComponent } from './pages/project-overview/project-overview.component';
+import {MatDialogModule, MatDialogRef} from '@angular/material';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -15,9 +17,12 @@ import { ProjectOverviewComponent } from './pages/project-overview/project-overv
     ProjectsRoutingModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAF16wKOlIRqQOAxtvR7Gk2Oobvpb_BfDk'
-    })
+    }),
+    MatDialogModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule
   ],
   declarations: [ProjectsListComponent, ProjectOverviewComponent, ProjectsBaseComponent, MapComponent, MapDetailsComponent],
-  providers: [GoogleMapsAPIWrapper,  KmlLayerManager]
+  providers: [GoogleMapsAPIWrapper,  KmlLayerManager, {provide: MatDialogRef, useValue: {}}],
 })
 export class ProjectsModule { }

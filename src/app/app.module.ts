@@ -21,6 +21,6 @@ import { ProjectsModule } from './modules/projects/projects.module';
     ProjectsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

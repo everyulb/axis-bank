@@ -24,12 +24,20 @@ export class MapDetailsComponent implements OnInit {
   markers: Array<any>;
 
   villageDetails = {
-    name: 'Muni ki reti Area-Distt-Tehri',
+    name: 'Muni ki reti, Dist:Tehri',
     wasteDischarge: '5800',
     primaryPollution: 'Grey & Black Water',
-    tapped: 5,
-    partiallyTapped: 3,
-    untapped: 4
+    totalPlants: 2,
+    totalPlantsCap: 13.5,
+    operationalPlants: 1,
+    operationalPlantsCap: 6.0,
+    proposedPlants: 1,
+    proposedPlantsCap: 7.5,
+    population: 28636,
+    households: 6667,
+    tapped: 8,
+    partiallyTapped: 2,
+    untapped: 3
   }
 
   currentMarker: any;
@@ -89,6 +97,10 @@ export class MapDetailsComponent implements OnInit {
       } else if (this.currentMarker.status === 'Partially Tapped') {
         this.currentMarker['iconUrl'] = '/assets/icons/partiallyTapped.svg';
       }
+  }
+
+  toggleFullScreenImage(): void {
+    console.log('Full screen image view');
   }
 
   

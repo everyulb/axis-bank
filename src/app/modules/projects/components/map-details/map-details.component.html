@@ -18,11 +18,43 @@
     <div class="village-details-content" *ngIf="showDetails">
       <h4>{{ villageDetails.name }}</h4>
       <div class="details">
+          <p>
+            {{ villageDetails.population}}
+          </p>
+          <span class="meta-text">Total Population</span>
+      </div>
+      <div class="details">
+          <p>
+            {{ villageDetails.households}}
+          </p>
+          <span class="meta-text">Total Households</span>
+        </div>
+      <div class="details">
         <p>
           {{ villageDetails.wasteDischarge}} lpm
         </p>
         <span class="meta-text">Total Discharge</span>
       </div>
+
+      <div class="details" style="display: inline-block;">
+          <p>
+            {{ villageDetails.totalPlantsCap}} MLD
+          </p>
+          <span class="meta-text">Total Plants: {{ villageDetails.totalPlants}}</span>
+      </div>
+      <div class="details" style="margin-left: 15px; display: inline-block;">
+          <p>
+            {{ villageDetails.operationalPlantsCap}} MLD
+          </p>
+          <span class="meta-text">Operational Plants: {{ villageDetails.operationalPlants}}</span>
+      </div>
+      <div class="details" style="margin-left: 15px; display: inline-block;">
+          <p>
+            {{ villageDetails.proposedPlantsCap}} MLD
+          </p>
+          <span class="meta-text">Proposed Plants: {{ villageDetails.proposedPlants}}</span>
+      </div>
+
       <div class="details">
         <p>
           {{ villageDetails.primaryPollution}}
@@ -58,6 +90,7 @@
     <!-- Markers Details Start -->
     <div class="marker-details" *ngIf="showMarkerDetails">
       <div class="image-container">
+        <!-- <button (click)="toggleFullScreenImage()"><i class="fas fa-expand"></i></button> -->
         <img [src]="currentMarker?.image" alt="">
       </div>
       <div class="details-container">
