@@ -10,19 +10,20 @@
 .nav-brand {
     color: var(--themeRed);
     margin-left: 82px;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem;
     font-weight: 500;
     line-height: 80px;
-    display: inline;
+    display: inline; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .brand-image {
-    display: inline-block;
+    margin: 0 auto;
 }
 
 .brand-image img {
-    margin-left: 20px;
-    width: 100px;
+    width: 120px;
 }
 
 .nav-right-links {

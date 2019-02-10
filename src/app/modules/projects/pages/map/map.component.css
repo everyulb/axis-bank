@@ -9,6 +9,10 @@
 }
 
 .nav-brand {
+    width: 80%;
+}
+
+/* .nav-brand {
     color: var(--themeRed);
     margin-left: 82px;
     font-size: 1.5rem;
@@ -24,7 +28,7 @@
 .brand-image img {
     margin-left: 20px;
     width: 100px;
-}
+} */
 
 .nav-right-links {
     float: right;

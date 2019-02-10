@@ -28,6 +28,25 @@ h1, h2, h3, h4, h5, h6, p {
     font-family: 'Roboto', sans-serif;
 }
 
+.nav-brand {
+    color: var(--themeRed);
+    margin-left: 82px;
+    /* font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 80px;
+    display: inline; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.brand-image {
+    margin: 0 auto;
+}
+
+.brand-image img {
+    width: 120px;
+}
+
 /* User Optinos Dropdown */
 .dropdown-menu {
     transform: translate3d(-100px, 74px, 0px) !important;
