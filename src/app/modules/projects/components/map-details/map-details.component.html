@@ -21,17 +21,17 @@
           <p>
             {{ villageDetails.population}}
           </p>
-          <span class="meta-text">Total Population</span>
+          <span class="meta-text">Population</span>
       </div>
       <div class="details">
           <p>
             {{ villageDetails.households}}
           </p>
-          <span class="meta-text">Total Households</span>
+          <span class="meta-text">Households</span>
         </div>
       <div class="details">
         <p>
-          {{ villageDetails.wasteDischarge}} lpm
+          {{ villageDetails.wasteDischarge}} MLD
         </p>
         <span class="meta-text">Total Discharge</span>
       </div>
@@ -53,13 +53,6 @@
             {{ villageDetails.proposedPlantsCap}} MLD
           </p>
           <span class="meta-text">Proposed Plants: {{ villageDetails.proposedPlants}}</span>
-      </div>
-
-      <div class="details">
-        <p>
-          {{ villageDetails.primaryPollution}}
-        </p>
-        <span class="meta-text">Primary reason for pollution</span>
       </div>
     </div>
     <div class="village-points" *ngIf="showDetails">
