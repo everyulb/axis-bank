@@ -17,6 +17,15 @@
     display: inline;
 }
 
+.brand-image {
+    display: inline-block;
+}
+
+.brand-image img {
+    margin-left: 20px;
+    width: 100px;
+}
+
 .nav-right-links {
     float: right;
 }
