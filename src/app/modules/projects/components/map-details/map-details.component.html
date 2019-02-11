@@ -44,16 +44,33 @@
       </div>
       <div class="details" style="margin-left: 15px; display: inline-block;">
           <p>
+            <img src="/assets/icons/op.svg" alt="">
             {{ villageDetails.operationalPlantsCap}} MLD
           </p>
           <span class="meta-text">Operational Plants: {{ villageDetails.operationalPlants}}</span>
       </div>
       <div class="details" style="margin-left: 15px; display: inline-block;">
           <p>
+            <img src="/assets/icons/pr.svg" alt="">
             {{ villageDetails.proposedPlantsCap}} MLD
-          </p>
+          </p>          
           <span class="meta-text">Proposed Plants: {{ villageDetails.proposedPlants}}</span>
       </div>
+
+      <div class="details">
+        <p>
+          3
+        </p>
+        <span class="meta-text">Pumping Stations</span>
+      </div>
+
+      <div class="details">
+        <p>
+          13
+        </p>
+        <span class="meta-text">Total Nallas</span>
+      </div>
+
     </div>
     <div class="village-points" *ngIf="showDetails">
       <div class="point" style="padding-left:38px;">
@@ -88,21 +105,33 @@
       </div>
       <div class="details-container">
         <h4>{{currentMarker?.name }}</h4>
-        <div class="status">
-            <img [src]="currentMarker?.iconUrl" alt="">
-            <p>{{currentMarker?.status }}</p>
-            <span class="meta-text">Status</span>
-        </div>
-        <div class="waste-details">
-          <div class="waste">
-              <h4>{{currentMarker?.discharge }}</h4>
-              <span class="meta-text">Discharge</span>
+        <div *ngIf="currentMarker?.status !== 'opPlant'">
+          <div class="status">
+              <img [src]="currentMarker?.iconUrl" alt="">
+              <p>{{currentMarker?.status }}</p>
+              <span class="meta-text">Status</span>
           </div>
-          <div class="waste">
-              <h4>{{currentMarker?.pollutionReason }}</h4>
-              <span class="meta-text">Primary reason for pollution</span>
+          <div class="waste-details">
+            <div class="waste">
+                <h4>{{currentMarker?.discharge }}</h4>
+                <span class="meta-text">Discharge</span>
+            </div>
+            <div class="waste">
+                <h4>{{currentMarker?.pollutionReason }}</h4>
+                <span class="meta-text">Primary reason for pollution</span>
+            </div>
           </div>
         </div>
+        <div *ngIf="currentMarker?.status === 'opPlant'">
+            <div class="status" *ngIf="currentMarker?.type === 'pr'">
+                <p>7.5 MLD</p>
+                <span class="meta-text">Capacity</span>
+            </div>
+            <div class="status" *ngIf="currentMarker?.type === 'op'">
+                <p>6 MLD</p>
+                <span class="meta-text">Capacity</span>
+            </div>
+          </div>
       </div>
     </div>
     <!-- Markers Details End -->

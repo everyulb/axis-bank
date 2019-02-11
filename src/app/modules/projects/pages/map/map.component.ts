@@ -65,6 +65,12 @@ export class MapComponent implements OnInit {
         m['iconUrl'] = '/assets/icons/untapped.svg';
       } else if (m.status === 'Partially Tapped') {
         m['iconUrl'] = '/assets/icons/partiallyTapped.svg';
+      } else if(m.status === 'opPlant') {
+        if(m.type === 'op') {
+          m['iconUrl'] = '/assets/icons/op.svg';
+        } else {
+          m['iconUrl'] = '/assets/icons/pr.svg';
+        }
       }
     })
     console.log(this.markers);

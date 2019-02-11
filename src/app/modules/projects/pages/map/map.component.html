@@ -46,11 +46,13 @@
         (layerClick)="handleKmlClick()"></agm-kml-layer>
 
         <!-- [iconUrl] for icons -->
+        <!-- [label]="{color: 'black', text: marker.name}" -->
         <agm-marker 
           *ngFor="let marker of markers; let i = index" 
           [latitude]="marker.lat" 
           [longitude]="marker.long"
           [iconUrl]="marker.iconUrl"
+          [label]="{color: 'black', text: marker.name}"
           (markerClick)="markerClicked(i)">
         </agm-marker>
 

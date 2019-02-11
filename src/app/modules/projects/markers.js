@@ -118,6 +118,22 @@ const jsonString = `[
       "lat": 30.10738889,
       "long": 78.30808333,
       "remark": ""
+    },
+    {
+      "name":"Dalanwala STP",
+      "lat": 30.107361111111114,
+      "long": 78.30786111111111,
+      "status": "opPlant",
+      "type": "pr",
+      "images": ["https://dummyimage.com/600x400/000/fff&text=Proposed+Plant"]
+    },
+    {
+      "name": "Lakhad Ghat",
+      "lat": 30.056972222222225,
+      "long": 78.26425,
+      "status": "opPlant",
+      "type": "op",
+      "images": ["https://drive.google.com/uc?authuser=0&id=188jl2hwPwK04RZ8FlFsoZMUal-cEAA4x&export=download"]
     }
   ]`;
   
