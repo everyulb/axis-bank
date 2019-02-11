@@ -125,7 +125,7 @@ const jsonString = `[
       "long": 78.30786111111111,
       "status": "opPlant",
       "type": "pr",
-      "images": ["https://dummyimage.com/600x400/000/fff&text=Proposed+Plant"]
+      "images": ["https://drive.google.com/uc?authuser=0&id=1jWs9xy79LRqco6LA1Az7zaXUPxcne2By&export=download" ]
     },
     {
       "name": "Lakhad Ghat",
