@@ -6,17 +6,17 @@
 }
 
 .project {
-    width: 819px;
-    height: 174px;
+    width: 42vw;
+    height: 20vh;
     background: #F7F7F7;
     border-radius: 4px;
-    padding: 25px;
+    padding: 1.5rem;
     cursor: pointer;
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
 }
 
 .project-header {
-    margin-bottom: 40px;
+    margin-bottom: 2.2rem;
 }
 
 .project-header h5 {

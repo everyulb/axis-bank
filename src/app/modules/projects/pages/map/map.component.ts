@@ -3,6 +3,7 @@ import { MapsAPILoader, AgmMap } from '@agm/core';
 import { GoogleMapsAPIWrapper, KmlLayerManager } from '@agm/core/services'
 import { Router } from '@angular/router';
 import { markers } from '../../markers.js';
+import { kmlLayers } from '../../kmlLayers.js';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -21,6 +22,7 @@ export class MapComponent implements OnInit {
 
   markerIcon = '/assets/icons/tapped.svg';
   markers: Array<any>;
+  kmlLayers: Array<any>;
 
   @ViewChild(AgmMap) map: AgmMap;
   emitMarkerClickEvent: Subject<any> = new Subject();
@@ -58,6 +60,9 @@ export class MapComponent implements OnInit {
 
   ngOnInit() {
     this.markers = markers;
+    // this.kmlLayers = kmlLayers;
+    this.polygons = kmlLayers;
+    // this.polygons.push({url: 'https://drive.google.com/uc?authuser=0&id=0B9lu4zOC3XNddkdqUkhLWXQ0NThMNWlTQ3VneGRDSjRpcGRZ&export=download'});
     this.markers.forEach(m => {
       if(m.status === 'Tapped') {
         m['iconUrl'] = '/assets/icons/tapped.svg';

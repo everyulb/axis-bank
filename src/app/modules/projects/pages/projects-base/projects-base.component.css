@@ -1,7 +1,7 @@
 /* Header Starts */
 .nav-header {
-    height: 80px;
-    line-height: 80px;
+    height: 9.25vh;
+    line-height: 9.25vh;
     padding: 0;
     margin: 0;
     background: rgba(247, 247, 247, 1);
@@ -42,6 +42,6 @@
 /* Header Ends */
 
 .projects-list {
-    margin-top: 90px;
-    margin-left: 98px;
+    margin-top: 9vh;
+    margin-left: 4.6vw;
 }
