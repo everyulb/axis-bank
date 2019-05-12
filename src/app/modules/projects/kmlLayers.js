@@ -16,6 +16,10 @@ export const kmlLayers = [
         url : 'https://s3.ap-south-1.amazonaws.com/namami-gange/haridwar.kml'
     },
     {
+        name: 'Joshimath',
+        url : 'https://s3.ap-south-1.amazonaws.com/namami-gange/joshimath.kml'
+    },
+    {
         name: 'Karanprayag',
         url : 'https://s3.ap-south-1.amazonaws.com/namami-gange/karanprayag.kml'
     },
